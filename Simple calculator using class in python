@@ -1,0 +1,59 @@
+# The simple Calculator using Class in python
+class calc:
+  def __init__(self):
+    self.history= []
+  def add(self,a,b):
+    print(f"{a}+{b}={a+b}")
+    self.history.append(f"{a}+{b}={a+b}")
+    return f"{a}+{b}={a+b}"
+  def sub(self,a,b):
+    print(f"{a}-{b}={a-b}")
+    self.history.append(f"{a}-{b}={a-b}")
+    return f"{a}-{b}={a-b}"
+  def mul(self,a,b):
+    print(f"{a}*{b}={a*b}")
+    self.history.append(f"{a}*{b}={a*b}")
+    return f"{a}*{b}={a*b}"
+  def div(self,a,b):
+    print(f"{a}/{b}={a/b}")
+    self.history.append(f"{a}/{b}={a/b}")
+    return f"{a}/{b}={a/b}"
+  def mod(self,a,b):
+    print(f"{a}%{b}={a%b}")
+    self.history.append(f"{a}%{b}={a%b}")
+    return f"{a}%{b}={a%b}"
+  def show_history(self):
+    print("History")
+    if len(self.history)==0:
+      print("No History")
+    else:
+      for i in self.history:
+        print(i)
+  def histdel(self):
+    self.history.clear()
+if __name__ == "__main__":
+  c = calc()
+  c.add(4,5)
+  c.sub(2,3)
+  c.mul(6,8)
+  c.div(2,6)
+  c.mod(1,6)
+  c.show_history()
+  c.histdel()
+  c.show_history()
+
+# The output will be
+
+4+5=9
+2-3=-1
+6*8=48
+2/6=0.3333333333333333
+1%6=1
+History
+4+5=9
+2-3=-1
+6*8=48
+2/6=0.3333333333333333
+1%6=1
+History
+No History
