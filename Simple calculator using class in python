@@ -15,9 +15,14 @@ class calc:
     self.history.append(f"{a}*{b}={a*b}")
     return f"{a}*{b}={a*b}"
   def div(self,a,b):
-    print(f"{a}/{b}={a/b}")
-    self.history.append(f"{a}/{b}={a/b}")
-    return f"{a}/{b}={a/b}"
+    if b !=0:
+      print(f"{a}/{b}={a/b}")
+      self.history.append(f"{a}/{b}={a/b}")
+      return f"{a}/{b}={a/b}"
+    else:
+      print(f"{a}/{b} : Zero divission error")
+      self.history.append(f"{a}/{b} : Zero divission error")
+      return f"{a}/{b} : Zero divission error")
   def mod(self,a,b):
     print(f"{a}%{b}={a%b}")
     self.history.append(f"{a}%{b}={a%b}")
